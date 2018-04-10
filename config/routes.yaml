@@ -5,6 +5,11 @@ index:
       path: /optionGroup
       controller: App\Controller\ChooseOptionGroupController::index
 
+
+accueil:
+      path: /home
+      controller: App\Controller\AccueilController::index
+
 index2:
       path: /createProject
       controller: App\Controller\CreateProjectController::index

@@ -19,6 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
       <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/login/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,11 +47,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="services.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/services.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-207" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>route</find>
+      <find>debug</find>
+      <find>asse</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -88,9 +107,6 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/assets/plugins/ckeditor/package.json" />
-      <path value="$PROJECT_DIR$/assets/plugins/morrisjs/package.json" />
-      <path value="$PROJECT_DIR$/assets/plugins/tinymce/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
       <path value="$PROJECT_DIR$/public/plugins/ckeditor/package.json" />
       <path value="$PROJECT_DIR$/public/plugins/morrisjs/package.json" />
@@ -247,6 +263,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
