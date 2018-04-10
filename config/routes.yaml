@@ -2,6 +2,13 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 index:
-      path: /login
-      controller: App\Controller\LoginController::index
+      path: /optionGroup
+      controller: App\Controller\ChooseOptionGroupController::index
 
+index2:
+      path: /createProject
+      controller: App\Controller\CreateProjectController::index
+
+addGroups:
+      path: /addGroups
+      controller: App\Controller\AddGroupsController::index
