@@ -46,6 +46,7 @@ class EleveRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
     /*
     public function findOneBySomeField($value): ?Eleve
     {
@@ -56,5 +57,5 @@ class EleveRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+*/
 }

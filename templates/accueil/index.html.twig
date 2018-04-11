@@ -1,6 +1,5 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% include 'common/navTop.html.twig' %}
+{% include 'common/navLeft.html.twig' %}
 
 {% block body %}
 <style>
@@ -8,13 +7,12 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>src/Controller/AccueilController.php</code></li>
-        <li>Your template at <code>templates/accueil/index.html.twig</code></li>
-    </ul>
-</div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>BLANK PAGE</h2>
+            </div>
+        </div>
+    </section>
+    </body>
 {% endblock %}

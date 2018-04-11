@@ -36,7 +36,7 @@ class EnseignantRepository extends ServiceEntityRepository
     }
     */
 
-
+    /*
     public function findOneBySomeField($value): ?Enseignant
     {
         return $this->createQueryBuilder('e')
@@ -44,7 +44,7 @@ class EnseignantRepository extends ServiceEntityRepository
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()
-        ;
     }
+    */
 
 }
