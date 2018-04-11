@@ -9,34 +9,39 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>src/Controller/AddGroupsController.php</code></li>
-        <li>Your template at <code>templates/add_groups/index.html.twig</code></li>
-    </ul>
-
+    Projet BDD :
     <table>
         <tr>
             <td>Nom groupe</td>
             <td>Etudiants</td>
         </tr>
         <tr>
-            <td>1</td>
-            <td>Mike123</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>jesica2</td>
+            <td>Team8</td>
+            <td>
+                Pierre Coumet <br>
+                Moustapha Ndoye <br>
+                Bastien Chies <br>
+                Pierre Lebon <br>
+            </td>
         </tr>
     </table>
 
-    <select class="form-control" id="eleves" multiple="true">
-        {% for eleve in eleves %}
-            {% set selected = '' %}
-            <option value="{{eleve.id}}" {{ selected }}>{{eleve.prenom}} {{eleve.nom}}</option>
-        {% endfor %}
-    </select>
+    <form id="ajouterElevesGroupe" method="POST">
+        <label>Nom du groupe : </label><input type="text"/><br>
+        <select id="promoEleves">
+            <option>B1</option>
+            <option>B2</option>
+            <option>B3</option>
+            <option>I4</option>
+            <option>I5</option>
+        </select>
+        <select id="listeEleves" multiple="multiple">
+            <option>Damien Pointet</option>
+            <option>Daravuth Pith</option>
+            <option>Valentin Ragout</option>
+        </select><br>
+        <button type="submit" disabled="true">Valider</button>
+    </form>
+    <a href="optionGroup"> <button>Terminer</button></a>
 </div>
 {% endblock %}

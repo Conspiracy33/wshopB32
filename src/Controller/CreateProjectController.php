@@ -32,7 +32,8 @@ class CreateProjectController extends Controller
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($project);
             $entityManager->flush();
-            return $this->redirectToRoute('addGroups', array());
+            return $this->redirectToRoute('addGroups', array(
+                'idProjet'=>$project->getId()));
         }
 
         return $this->render('create_project/index.html.twig', array(
