@@ -3,17 +3,15 @@
 namespace App\Controller;
 
 
+use App\Entity\Eleve;
 use App\Entity\Enseignant;
-use App\Entity\Etudiant;
 use App\Entity\ResponsablePedago;
-use App\Entity\User;
-use Symfony\Component\Form\Extension\Core\Type\ButtonType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -56,7 +54,7 @@ class LoginController extends Controller
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
             $user = $form->getData();
-
+            //wis adresse : ecole-wis.net
             // ... perform some action, such as saving the task to the database
             // for example, if Task is a Doctrine entity, save it!
             //$entityManager = $this->getDoctrine()->getManager();
@@ -69,7 +67,7 @@ class LoginController extends Controller
             switch ($user['statut'])
             {
                 case 0:
-                    $repository = $this->getDoctrine()->getRepository(Etudiant::class);
+                    $repository = $this->getDoctrine()->getRepository(Eleve::class);
                     break;
 
                 case 1:
@@ -84,12 +82,28 @@ class LoginController extends Controller
                     $repository = null;
                     break;
             }
-            $utilisateur = $repository->findOneBy([
-                'mail' => $user['mail'],
-                'motdepasse' => $user['password'],
-            ]);
-            if($utilisateur != null) {
-                return $this->redirectToRoute('accueil', array());
+            if($repository != null) {
+                $utilisateur = $repository->findOneBy([
+                    'email' => $user['mail'],
+                    'motdepasse' => $user['password'],
+                ]);
+                if($utilisateur != null) {
+                    $session = new Session();
+                    if(isset($_SESSION['nom'])) {
+
+                    }
+                    else{
+                        $session->set('nom', $utilisateur->getNom());
+                        $session->set('prenom', $utilisateur->getPrenom());
+                        $session->set('email', $utilisateur->getMail());
+                        $session->set('statut', $user['statut']);
+                    }
+                    //$session->set('email', 'Drak');
+                    //var_dump($_SESSION['_sf2_attributes']);/*
+                    return $this->render('accueil/index.html.twig', array(
+                        'session'   => $_SESSION['_sf2_attributes']
+                    ));
+                }
             }
             else
             {
