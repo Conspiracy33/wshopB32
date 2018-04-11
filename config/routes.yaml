@@ -18,6 +18,10 @@ consultProject:
       path: /consultProject
       controller: App\Controller\ConsultProjectController::index
 
+seeMore:
+      path: /seeMore
+      controller: App\Controller\SeeMoreController::index
+
 addGroups:
       path: /addGroups
       controller: App\Controller\AddGroupsController::index
