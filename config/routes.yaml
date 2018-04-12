@@ -25,3 +25,7 @@ seeMore:
 addGroups:
       path: /addGroups
       controller: App\Controller\AddGroupsController::index
+
+help:
+      path: /help
+      controller: App\Controller\HelpController::index
