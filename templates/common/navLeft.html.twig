@@ -33,6 +33,21 @@
                     <span>Home</span>
                 </a>
             </li>
+            {% if(session.statut == 2) %}
+            <li>
+                <a href="createProject">
+                    <i class="material-icons">plus_one</i>
+                    <span>Créer nouveau projet</span>
+                </a>
+            </li>
+            <li>
+                <a href="consultProject">
+                    <i class="material-icons">remove_red_eye</i>
+                    <span>Consulter projet existant</span>
+                </a>
+            </li>
+            {% endif %}
+
             <li>
                 <a href="pages/typography.html">
                     <i class="material-icons">text_fields</i>
