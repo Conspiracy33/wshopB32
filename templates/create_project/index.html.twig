@@ -1,14 +1,74 @@
-{% extends 'base.html.twig' %}
-
+{% include 'common/navTop.html.twig' %}
+{% include 'common/navLeft.html.twig' %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <title>Creation de projet</title>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-    {{ form_end(form) }}
-</div>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <!-- Vertical Layout -->
+                {{ form_start(form) }}
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>
+                                    CREATION DE PROJET
+                                </h2>
+                                <ul class="header-dropdown m-r--5">
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                           role="button" aria-haspopup="true" aria-expanded="false">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another action</a></li>
+                                            <li><a href="javascript:void(0);">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <form>
+                                    <!--<<label for="email_address">Email Address</label>-->
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            {{ form_widget(form.nom) }}
+                                            <!--<input type="text" id="email_address" class="form-control" placeholder="Enter your email address">-->
+                                        </div>
+                                    </div>
+                                    <!--<<label for="password">Password</label>-->
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            {{ form_widget(form.nbJetons) }}
+                                            <!--<input type="password" id="password" class="form-control" placeholder="Enter your password">-->
+                                        </div>
+                                    </div>
+                                    <br>
+                                    {{ form_widget(form.Valider) }}
+                                    <!--<button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+    </body>
 {% endblock %}

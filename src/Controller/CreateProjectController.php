@@ -20,9 +20,9 @@ class CreateProjectController extends Controller
     {
         $project = new Project();
         $form = $this->createFormBuilder($project)
-            ->add('nom', TextType::class, array('label' => 'Nom du Projet : '))
-            ->add('nbJetons', IntegerType::class, array('label' => 'Nombre de Jetons : '))
-            ->add('Valider', SubmitType::class, array('label' => 'Valider'))
+            ->add('nom', TextType::class, array('label' => 'Nom du Projet : ', 'attr' => ['class' => 'form-control','placeholder' => 'Nom du projet']))
+            ->add('nbJetons', IntegerType::class, array('label' => 'Nombre de Jetons : ',  'attr' => ['class' => 'form-control', 'placeholder' => 'Nombre de jetons']))
+            ->add('Valider', SubmitType::class, array('label' => 'Valider',  'attr' => ['class' => 'btn btn-block btn-lg btn-primary m-t-15 waves-effect', 'type' => 'submit', 'value' => 'Valider']))
             ->getForm();
 
         $form->handleRequest($request);
@@ -38,6 +38,7 @@ class CreateProjectController extends Controller
 
         return $this->render('create_project/index.html.twig', array(
             'form' => $form->createView(),
+            'session'   => $_SESSION['_sf2_attributes'],
         ));
     }
 }

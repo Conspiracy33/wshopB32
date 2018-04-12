@@ -14,6 +14,7 @@ class ChooseOptionGroupController extends Controller
     {
         return $this->render('choose_option_group/index.html.twig', [
             'controller_name' => 'ChooseOptionGroupController',
+            'session'   => $_SESSION['_sf2_attributes']
         ]);
     }
 }
