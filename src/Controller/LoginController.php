@@ -95,7 +95,7 @@ class LoginController extends Controller
                     else{
                         $session->set('nom', $utilisateur->getNom());
                         $session->set('prenom', $utilisateur->getPrenom());
-                        $session->set('email', $utilisateur->getMail());
+                        $session->set('email', $utilisateur->getEmail());
                         $session->set('statut', $user['statut']);
                     }
                     //$session->set('email', 'Drak');
