@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% include 'common/navTop.html.twig' %}
+{% include 'common/navLeft.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,20 +8,55 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    Historique d'utilisation des jetons du  groupe 1 pour le projet SQL
-    <table>
-        <tr>
-            <td>
-                Nombre de jetons utilisés
-            </td>
-            <td>
-                Intervenant concerné
-            </td>
-            <td>
-                Date
-            </td>
-        </tr>
-    </table>
-</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                HISTORIQUE
+                                <small>Historique d'utilisation des jetons du  groupe 1 pour le projet SQL</small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre de jetons utilisés</th>
+                                    <th>Intervenant concerné</th>
+                                    <th>Date</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>3</td>
+                                    <td>Phiphi Rourou</td>
+                                    <td>10/04/2018</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
 {% endblock %}
