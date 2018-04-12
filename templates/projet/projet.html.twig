@@ -16,7 +16,54 @@
         }
     </style>
     <section class="content">
-        test
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="header">
+                                <h2>
+                                    Projet : KCREA
+                                </h2>
+                                <ul class="header-dropdown m-r--5">
+                                    <li class="dropdown">
+                                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="" class=" waves-effect waves-block">Ajouter un projet</a></li>
+                                            <li><a href="" class=" waves-effect waves-block">Modifier un projet</a></li>
+                                            <li><a href="" class=" waves-effect waves-block">Quitter un projet</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <table id="mainTable" class="table table-striped" style="cursor: pointer;">
+                                    <thead>
+                                    <tr>
+                                        <th>Nom du projet</th>
+                                        <th>Priorité</th>
+                                        <th>Avancement</th>
+                                        <th>Jetons</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td contenteditable='true'>KCREA</td>
+                                        <td contenteditable='true'>3</td>
+                                        <td contenteditable='true'>40%</td>
+                                        <td contenteditable='true'>50</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <input style="position: absolute; display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    <script src="{{asset("js/pages/tables/editable-table.js")}}"></script>
 {% endblock %}
