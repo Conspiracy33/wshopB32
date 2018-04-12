@@ -14,6 +14,7 @@ class SeeMoreController extends Controller
     {
         return $this->render('see_more/index.html.twig', [
             'controller_name' => 'SeeMoreController',
+            'session'   => $_SESSION['_sf2_attributes'],
         ]);
     }
 }

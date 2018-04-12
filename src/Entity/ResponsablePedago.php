@@ -67,12 +67,12 @@ class ResponsablePedago
         return $this;
     }
 
-    public function getMail(): ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    public function setMail(string $email): self
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
