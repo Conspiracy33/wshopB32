@@ -46,7 +46,7 @@
                     </tr>
                 </table>
             </div>
-                <div id="groupCSharp" class="show">
+                <div id="groupCSharp" class="hide">
                 <table>
                     <tr>
                         <td>Nom groupe</td>
@@ -70,7 +70,7 @@
                     </tr>
                 </table>
                 </div>
-                <div id="groupJava" hidden="true">
+                <div id="groupJava" class="hide">
                     <table>
                         <tr>
                             <td>Nom groupe</td>
@@ -95,5 +95,46 @@
         </div>
     </div>
 </section>
-    </body>
+    {% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            /*groupCSharp.style.display = "none";
+            groupJava.style.display = "none";
+            groupSQL.style.display = "none";*/
+            $('#listeProjets').on('change',function() {
+                var value = this.value;
+                console.log("test " + value);
+                if (value=='SQL') {
+                    /*groupSQL.style.display = "block";
+                    groupJava.style.display = "none";
+                    groupCSharp.style.display = "none";*/
+                    /*$("#groupSQL").removeClass("hide");
+                    $("#groupSQL").addClass("show");*/
+                    $("#groupSQL").attr('class', 'show');
+                    $("#groupCSharp").attr('class', 'hide');
+                    $("#groupJava").attr('class', 'hide');
+                }
+                else if (value=='CSharp') {
+                    /*groupJava.style.display = "none";
+                    groupSQL.style.display = "none";
+                    groupCSharp.style.display = "block";*/
+                    $("#groupSQL").attr('class', 'hide');
+                    $("#groupCSharp").attr('class', 'show');
+                    $("#groupJava").attr('class', 'hide');
+                }
+                else if (value=='Java') {
+                    $("#groupSQL").attr('class', 'hide');
+                    $("#groupCSharp").attr('class', 'hide');
+                    $("#groupJava").attr('class', 'show');
+                }
+                else {
+                    $("#groupSQL").attr('class', 'hide');
+                    $("#groupCSharp").attr('class', 'hide');
+                    $("#groupJava").attr('class', 'hide');
+                }
+            });
+        });
+    </script>
+{% endblock %}
 {% endblock %}
